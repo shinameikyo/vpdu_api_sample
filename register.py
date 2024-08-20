@@ -1,20 +1,26 @@
-from post_test import *
+from pdu_request import *
+from url_factory import *
 
 
-def vpdu_user_registration(addr, user='admin', pswd='magic5580', role='', permission=''):
+def initial_registration(addr, user='admin', pswd='magic5580', role='', permission=''):
 
-    url = create_url(addr, footer='api/auth')
+    url = url_add_footer(addr, footer='auth')
 
     payload = {'cmd': 'add', 'data': {'username': user, 'password': pswd, 'admin': True, 'control': True}}
 
     print(f"url: {url}, payload: {payload}")
 
-    successFlg, msg = post_request(url, payload)
+    res = post(url, payload)
 
-    return successFlg, msg
+    return res
 
 
+if __name__ == 'main':
 
-successFlg, msg = vpdu_user_registration(addr)
+    ip_addr = '192.168.7.195'
 
-print(msg)
+    url = get_pdu_api_url(ip_addr)
+
+    res = initial_registration(url)
+
+    print(res)

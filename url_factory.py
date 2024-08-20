@@ -1,14 +1,9 @@
 import urllib.parse as urlparse
 
 
-ipv4 = ''
-ipv6 = ''
+def get_pdu_api_url(ip_addr, footer=''):
+    return url_add_footer(f'https://{ip_addr}/api/', footer)
 
-addr = ipv4 if ipv4 else ipv6
+def url_add_footer(url, footer=''):
+    return urlparse.urljoin(url, footer)
 
-
-def create_url(addr, footer='', stuffings=[]):g
-    
-    url = urlparse.urljoin('https://' + addr, footer)
-
-    return url
