@@ -1,6 +1,3 @@
-import urllib.parse as urlparse
-import requests
-
 from url_factory import get_pdu_api_url, url_add_footer
 from pdu_request import get, post
 
