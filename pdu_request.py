@@ -3,6 +3,8 @@ from requests.exceptions import Timeout, SSLError
 
 
 def get(url, payload={}, timeout=5):
+    """
+    """
 
     print(f'GET requset url: {url}')
 
