@@ -2,14 +2,14 @@ from pdu_request import *
 from url_factory import *
 
 
-def initial_registration(addr, user='admin', pswd='magic5580', role='', permission=''):
+def initial_registration(addr, user='admin', pswd='password', role='', permission=''):
     """
     初期登録を行う関数。
 
     Args:
         addr (str): 登録先のアドレス。
         user (str): ユーザー名。デフォルトは'admin'。
-        pswd (str): パスワード。デフォルトは'magic5580'。
+        pswd (str): パスワード。デフォルトは'password'。
         !(未実装) role (str): ユーザーの役割。デフォルトは空文字。
         !(未実装) permission (str): ユーザーの権限。デフォルトは空文字。
 
