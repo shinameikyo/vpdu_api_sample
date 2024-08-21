@@ -1,1 +1,1 @@
-vpdu_api_sample
+Vertiv PDUのAPI用サンプルコード
