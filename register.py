@@ -3,6 +3,19 @@ from url_factory import *
 
 
 def initial_registration(addr, user='admin', pswd='magic5580', role='', permission=''):
+    """
+    初期登録を行う関数。
+
+    Args:
+        addr (str): 登録先のアドレス。
+        user (str): ユーザー名。デフォルトは'admin'。
+        pswd (str): パスワード。デフォルトは'magic5580'。
+        !(未実装) role (str): ユーザーの役割。デフォルトは空文字。
+        !(未実装) permission (str): ユーザーの権限。デフォルトは空文字。
+
+    Returns:
+        res: レスポンス。
+    """
 
     url = url_add_footer(addr, footer='auth')
 
